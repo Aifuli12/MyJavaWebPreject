@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.4.3.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.aifuli</groupId>
+    <artifactId>raven</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>web</module>
+        <module>service</module>
+        <module>common</module>
+        <module>respository</module>
+        <module>pojo</module>
+    </modules>
+
+
+    <properties>
+        <springboot.version>1.4.7.RELEASE</springboot.version>
+        <java.version>1.8</java.version>
+        <maven.test.skip>true</maven.test.skip>
+        <!--mybatis-genarator 配置targetProject属性 -->
+        <pojo.target.dir>src/main/java</pojo.target.dir>
+        <logback.version>1.1.6</logback.version>
+        <guava.version>18.0</guava.version>
+        <jackson.version>2.6.1</jackson.version>
+        <druid.version>1.1.6</druid.version>
+        <druid.spring.version>1.1.6</druid.spring.version>
+        <mybatis.version>3.4.1</mybatis.version>
+        <commons-fileupload.version>1.3</commons-fileupload.version>
+        <commons-lang3.version>3.3.2</commons-lang3.version>
+        <mybatis-spring.version>1.3.0</mybatis-spring.version>
+        <springboot-admin.version>1.3.2</springboot-admin.version>
+        <pagehelper.version>4.1.6</pagehelper.version>
+        <cxf.version>3.1.6</cxf.version>
+        <jmock.version>1.27</jmock.version>
+        <shiro.version>1.2.4</shiro.version>
+        <activiti.version>6.0.0</activiti.version>
+        <tk.mapper.version>3.4.0</tk.mapper.version>
+        <persistence.version>1.0</persistence.version>
+        <jackson-mapper.version>1.9.13</jackson-mapper.version>
+        <poi.version>3.15</poi.version>
+        <elastic-job.version>1.1.1</elastic-job.version>
+        <swagger.version>2.7.0</swagger.version>
+        <jsqlparser.version>1.0</jsqlparser.version>
+        <ali-mq.version>1.2.3</ali-mq.version>
+        <ali-oss.version>2.6.0</ali-oss.version>
+        <ali-sts.version>2.1.6</ali-sts.version>
+        <ali-core.version>2.1.7</ali-core.version>
+        <ali-rds>2.1.0</ali-rds>
+        <jwt.version>0.7.0</jwt.version>
+        <pdfbox.version>2.0.4</pdfbox.version>
+        <jai-imageio.version>1.3.1</jai-imageio.version>
+        <jodconverter.version>4.0.0-RELEASE</jodconverter.version>
+        <ant.version>1.8.3</ant.version>
+        <jpinyin.version>1.1.8</jpinyin.version>
+        <baidu.version>1.0.0</baidu.version>
+        <junrar.version>0.7</junrar.version>
+        <flyway.version>4.2.0</flyway.version>
+        <client-jms.version>0.32</client-jms.version>
+        <qpid.version>0.32</qpid.version>
+        <jms.version>1.1-rev-1</jms.version>
+        <azure-core.version>0.9.7</azure-core.version>
+        <azure-servicebus.version>0.9.7</azure-servicebus.version>
+        <azure-eventhubs.version>0.9.0</azure-eventhubs.version>
+        <azure-storage.version>5.3.0</azure-storage.version>
+        <jackson-dataformat-xml.version>2.8.8</jackson-dataformat-xml.version>
+        <com.google.code.gson.version>2.2.4</com.google.code.gson.version>
+    </properties>
+<dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-boot</artifactId>
+            <version>${springboot.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>${springboot.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+            <version>${springboot.version}</version>
+        </dependency>
+
+        <!-- druid -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>${druid.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <version>${druid.spring.version}</version>
+        </dependency>
+
+
+        <!-- mysql -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.version}</version>
+        </dependency>
+
+        <!-- mybatis -->
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <version>${mybatis.version}</version>
+        </dependency>
+
+        <!--mybatis-->
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis-spring</artifactId>
+            <version>${mybatis-spring.version}</version>
+        </dependency>
+        <!--通用mapper-->
+        <dependency>
+            <groupId>tk.mybatis</groupId>
+            <artifactId>mapper</artifactId>
+            <!-- 建议使用最新版本,最新版本请从项目首页查找 -->
+            <version>${tk.mapper.version}</version>
+        </dependency>
+
+
+        <!-- mybatis分页 -->
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper</artifactId>
+            <version>${pagehelper.version}</version>
+        </dependency>
+        <!--必须依赖 通用mapper需要-->
+        <dependency>
+            <groupId>javax.persistence</groupId>
+            <artifactId>persistence-api</artifactId>
+            <version>${persistence.version}</version>
+        </dependency>
+
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.boot</groupId>-->
+            <!--<artifactId>spring-boot-starter-data-mongodb</artifactId>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.boot</groupId>-->
+            <!--<artifactId>spring-boot-starter-data-redis</artifactId>-->
+        <!--</dependency>-->
+     <!--   <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-freemarker</artifactId>
+        </dependency>-->
+
+        <!--<dependency>-->
+            <!--<groupId>junit</groupId>-->
+            <!--<artifactId>junit</artifactId>-->
+            <!--<version>4.12</version>-->
+        <!--</dependency>-->
+        <!--引入mock框架-->
+        <!--<dependency>-->
+            <!--<groupId>org.mockito</groupId>-->
+            <!--<artifactId>mockito-core</artifactId>-->
+            <!--<version>1.10.19</version>-->
+        <!--</dependency>-->
+        <!--rabbitmq-->
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.boot</groupId>-->
+            <!--<artifactId>spring-boot-starter-amqp</artifactId>-->
+        <!--</dependency>-->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>${guava.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>${com.google.code.gson.version}</version>
+        </dependency>
+    </dependencies>
+</dependencyManagement>
+
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <targetPath>${project.build.directory}/classes/</targetPath>
+                <excludes>
+                    <exclude>**/rebel.xml</exclude>
+                    <exclude>sql/*.sql</exclude>
+                </excludes>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+        <finalName>${project.artifactId}</finalName>
+        <!--<plugins>-->
+            <!--<plugin>-->
+                <!--&lt;!&ndash; The plugin rewrites your manifest &ndash;&gt;-->
+                <!--<groupId>org.springframework.boot</groupId>-->
+                <!--<artifactId>spring-boot-maven-plugin</artifactId>-->
+                <!--<version>1.3.0.RELEASE</version>-->
+                <!--<configuration>&lt;!&ndash; 指定该Main Class为全局的唯一入口 &ndash;&gt;-->
+                    <!--<mainClass>com.aifuli.web.TenantWebApplication</mainClass>-->
+                    <!--<layout>ZIP</layout>-->
+                <!--</configuration>-->
+                <!--&lt;!&ndash;<executions>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<execution>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<goals>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<goal>repackage</goal>&lt;!&ndash;可以把依赖的包都打包到生成的Jar包中&ndash;&gt;&ndash;&gt;-->
+                        <!--&lt;!&ndash;</goals>&ndash;&gt;-->
+                        <!--&lt;!&ndash;&lt;!&ndash;可以生成不含依赖包的不可执行Jar包&ndash;&gt;&ndash;&gt;-->
+                        <!--&lt;!&ndash;&lt;!&ndash; configuration>&ndash;&gt;-->
+                          <!--&lt;!&ndash;<classifier>exec</classifier>&ndash;&gt;-->
+                        <!--&lt;!&ndash;</configuration> &ndash;&gt;&ndash;&gt;-->
+                    <!--&lt;!&ndash;</execution>&ndash;&gt;-->
+                <!--&lt;!&ndash;</executions>&ndash;&gt;-->
+            <!--</plugin>-->
+        <!--</plugins>-->
+    </build>
+</project>

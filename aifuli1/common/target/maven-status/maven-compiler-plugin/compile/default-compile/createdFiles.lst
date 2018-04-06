@@ -1,0 +1,11 @@
+com\aifuli\common\common\RavenResult.class
+com\aifuli\common\config\DataSourceConfiguration.class
+com\aifuli\common\config\MySMTPAppender.class
+com\aifuli\common\common\MessageSourceConstants.class
+com\aifuli\common\config\MailLayout.class
+com\aifuli\common\config\MyBatisMapperScannerConfig.class
+com\aifuli\common\common\CommonCodeConstants.class
+com\aifuli\common\config\MySMTPAppender$1.class
+com\aifuli\common\config\MybatisConfig.class
+com\aifuli\common\datasource\DataSourceContextHolder.class
+com\aifuli\common\config\WebSocketConfig.class
