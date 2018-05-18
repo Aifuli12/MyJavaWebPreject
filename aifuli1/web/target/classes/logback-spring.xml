@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
-    <property name="APP_NAME" value="web_test"/>
+    <property name="APP_NAME" value="web_dev"/>
     <property name="LOG_ROOT_DIR" value="/d/export/Logs/${APP_NAME}"/>
     <property name="ENCODER_PATTERN"
               value=" %d{[yyyy-MM-dd HH:mm:ss]}[%level][%logger{1}:%L-%X{TENANT_KEY}]  %msg%n"/>
@@ -8,7 +8,7 @@
     <property name="MAX_HISTORY" value="90"/>
     <property name="MAX_FILE_SIZE" value="50MB"/>
     <property name="EMAIL_ENABLE" value="false"></property>
-    <property name="CONSOLE_FILTER" value="INFO"></property>
+    <property name="CONSOLE_FILTER" value="DEBUG"></property>
 
 
     <!-- 邮件发送相关 -->
@@ -165,7 +165,7 @@
     </appender>-->
 
 
-    <root level="INFO">
+    <root level="DEBUG">
         <appender-ref ref="ERROR_FILE"/>
         <appender-ref ref="DEBUG_FILE"/>
         <appender-ref ref="INFO_FILE"/>

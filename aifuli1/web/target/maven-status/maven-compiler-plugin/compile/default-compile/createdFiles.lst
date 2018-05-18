@@ -1,4 +1,5 @@
 com\aifuli\web\controller\UserController.class
 com\aifuli\web\controller\WebSocket.class
 com\aifuli\web\TenantWebApplication.class
+test\test.class
 com\aifuli\web\controller\ChatController.class
